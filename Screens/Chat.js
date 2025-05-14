@@ -10,6 +10,7 @@ const ref_lesdiscussions = ref_database.child("Listes_discussion");
 export default function Chat(props) {
   const currentid = props.route.params?.currentid;
   const secondid = props.route.params?.secondid;
+  const [pseudo, setPseudo] = useState('Utilisateur inconnu');
 
   if (!currentid || !secondid) {
     console.error("Erreur : ID(s) manquant(s)", { currentid, secondid });
@@ -28,22 +29,33 @@ export default function Chat(props) {
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
+    // Fetch pseudonym for secondid
+    firebase.database().ref(`ListComptes/${secondid}`).once('value')
+      .then(snapshot => {
+        const userData = snapshot.val();
+        setPseudo(userData ? userData.pseudo : 'Utilisateur inconnu');
+        console.log('Second user pseudo:', userData?.pseudo); // Debug: Verify pseudo
+      })
+      .catch(error => console.error('Error fetching second user data:', error));
+
     const listener = ref_Messages.on("value", (snapshot) => {
       const d = [];
       snapshot.forEach((un_msg) => {
         d.push(un_msg.val());
       });
       setMessages(d);
+      console.log('Messages:', d); // Debug: Verify messages
     });
 
     return () => {
       ref_Messages.off("value", listener);
     };
-  }, []);
+  }, [secondid]);
 
   useEffect(() => {
     const listener = ref_otherTyping.on("value", (snapshot) => {
       setIsTyping(snapshot.val() === true);
+      console.log('Other user typing:', snapshot.val()); // Debug: Verify typing
     });
 
     return () => {
@@ -68,7 +80,20 @@ export default function Chat(props) {
   };
 
   return (
-    <ImageBackground style={styles.background} resizeMode="cover">
+    <ImageBackground
+      source={require("../assets/forg+dinner.jpg")} 
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={styles.navbar}>
+        <TouchableOpacity
+          onPress={() => props.navigation.goBack()}
+          style={styles.backButton}
+        >
+          <Ionicons name="arrow-back" size={24} color="#007bff" />
+        </TouchableOpacity>
+        <Text style={styles.navbarTitle}>{pseudo}</Text>
+      </View>
       <View style={styles.container}>
         <FlatList
           data={messages}
@@ -82,9 +107,9 @@ export default function Chat(props) {
         />
 
         {isTyping && (
-         <View style={styles.typingBubble}>
-         <Text style={styles.typingText}>is typing...</Text>
-       </View>
+          <View style={styles.typingBubble}>
+            <Text style={styles.typingText}>is typing...</Text>
+          </View>
         )}
 
         <View style={styles.inputContainer}>
@@ -106,11 +131,43 @@ export default function Chat(props) {
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  navbar: {
+    marginTop: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    marginBottom: 10,
+    marginHorizontal: 10,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+  },
+  backButton: {
+    position: 'absolute',
+    left: 10,
+    padding: 5,
+  },
+  navbarTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#11A', // Match ChatGroup.js title color
+  },
   container: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingTop: 20,
     paddingHorizontal: 10,
+    paddingBottom: 10,
   },
   messageContainer: {
     padding: 10,
@@ -120,11 +177,11 @@ const styles = StyleSheet.create({
   },
   myMessage: {
     alignSelf: 'flex-end',
-    backgroundColor: '#DCF8C6',
+    backgroundColor: '#DCF8C6', // Match ChatGroup.js
   },
   theirMessage: {
     alignSelf: 'flex-start',
-    backgroundColor: '#57BFEC', // Gris clair pour l'autre utilisateur
+    backgroundColor: '#57BFEC', // Keep original color
   },
   messageText: {
     fontSize: 16,
@@ -133,12 +190,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#555',
     marginTop: 4,
-  },
-  typingIndicator: {
-    fontStyle: 'italic',
-    color: '#888',
-    marginBottom: 5,
-    marginLeft: 10,
   },
   inputContainer: {
     flexDirection: 'row',
@@ -157,15 +208,10 @@ const styles = StyleSheet.create({
   sendButton: {
     marginLeft: 10,
     padding: 10,
-    backgroundColor: '#007bff',
+    backgroundColor: '#007bff', // Match ChatGroup.js button color
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  background: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
   },
   typingBubble: {
     alignSelf: 'flex-start',
@@ -176,10 +222,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     maxWidth: '70%',
   },
-  
   typingText: {
     fontSize: 13,
     color: '#555',
   },
-  
 });

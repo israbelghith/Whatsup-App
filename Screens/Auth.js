@@ -15,13 +15,24 @@ const database=firebase.database();
 const ref_database=database.ref();
 const ref_listComptes=ref_database.child("ListComptes");
 export default function Auth(props) {
-  const [email, setEmail] = useState()//Isra@gmail.com
-const [password, setPassword] = useState()//123456
+  const [email, setEmail] = useState("Isra@gmail.com")//Isra@gmail.com
+const [password, setPassword] = useState("123456")//123456
   return (
     <ImageBackground
       source={require("../assets/back1.jpg")}
       style={styles.container}
     >
+      <Text
+          style={{
+           
+            fontSize: 34,
+            fontWeight: "bold",
+            color: "purple",
+            marginBottom:20
+          }}
+        >
+          Welcome
+        </Text>
       <View
         style={{
           width: "98%",
@@ -32,16 +43,7 @@ const [password, setPassword] = useState()//123456
           borderRadius: 20,
         }}
       >
-        <Text
-          style={{
-            backgroundColor: "lightblue",
-            fontSize: 34,
-            fontWeight: "bold",
-            color: "purple",
-          }}
-        >
-          Bienvenue
-        </Text>
+        
 
         <TextInput
         onChangeText={setEmail}
@@ -87,7 +89,7 @@ const [password, setPassword] = useState()//123456
                 });
             }}
             title="connect"
-            color="lightblue"
+            color="#0B6E"
           >
             {" "}
             Connect
@@ -128,6 +130,6 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: "center",
     borderRadius: 4,
-    backgroundColor: "lightpink",
+    backgroundColor: "#9E7BB5",
   },
 });

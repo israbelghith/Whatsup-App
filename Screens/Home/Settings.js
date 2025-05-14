@@ -119,9 +119,10 @@ export default function Settings(props) {
         placeholderTextColor={"white"}
         placeholder="le numero"
       />
-
-      <Button
+<View style={[styles.buttonContainer, { marginTop: 25 }]}>
+      <Button 
         title="Submit"
+        color='#02B126'
         onPress={async () => {
           const linkimage = uriImage ? await uploadImage(uriImage) : null;
           ref_uncompte.update({
@@ -133,8 +134,8 @@ export default function Settings(props) {
           alert("Données mises à jour !");
         }}
       />
-
-      <View style={{ marginTop: 10 }}>
+</View>
+      <View style={[styles.buttonContainer]}>
         <Button
           onPress={() => {
             auth.signOut().then(() => {
@@ -154,8 +155,8 @@ export default function Settings(props) {
               console.error("Erreur lors de la déconnexion : ", error);
             });
           }}
-          color={"gray"}
-          title="Déconnecter"
+          color="#C9184A"
+          title="SignOut"
         />
       </View>
     </ImageBackground>
@@ -164,6 +165,7 @@ export default function Settings(props) {
 
 const styles = StyleSheet.create({
   title: {
+    marginTop:40,
     fontSize: 32,
     color: "#11A",
     fontWeight: "bold",
@@ -176,7 +178,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     marginBottom: 50,
   },
-  input: {
+ input: {
     color: "white",
     borderWidth: 2,
     borderColor: "white",
@@ -184,13 +186,23 @@ const styles = StyleSheet.create({
     width: "90%",
     backgroundColor: "#0007",
     marginBottom: 15,
-    borderRadius: 4,
+    borderRadius: 15, // Increased for a more rounded look
     textAlign: "center",
+    paddingHorizontal: 10, // Added for better text spacing
+    fontSize: 16, // Ensure readable text
   },
   container: {
     flex: 1,
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
+  },
+   buttonContainer: {
+    width: "60%", // Match input width
+    borderWidth: 2,
+    borderColor: "white", // Match input border
+    borderRadius: 15, // Match input rounded corners
+    overflow: "hidden", // Ensure button corners are clipped to rounded container
+    marginBottom: 15, // Match input spacing
   },
 });

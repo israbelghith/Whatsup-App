@@ -26,7 +26,16 @@ export default function NewAccount(props) {
     <ImageBackground
       source={require("../assets/back1.jpg")}
       style={styles.container}
-    >
+    ><Text
+          style={{
+            marginBottom:40,
+            fontSize: 34,
+            fontWeight: "bold",
+            color: "purple",
+          }}
+        >
+          Create New Account
+        </Text>
       <View
         style={{
           width: "98%",
@@ -37,15 +46,7 @@ export default function NewAccount(props) {
           borderRadius: 20,
         }}
       >
-        <Text
-          style={{
-            fontSize: 34,
-            fontWeight: "bold",
-            color: "purple",
-          }}
-        >
-          Create New Account
-        </Text>
+        
 
         <TextInput
           onChangeText={(ch) => setemail(ch)}
@@ -95,7 +96,7 @@ export default function NewAccount(props) {
               }
             }}
             title="CREATE"
-            color="lightblue"
+            color="#0B6E"
           >
             {" "}
             CREATE
@@ -133,6 +134,6 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: "center",
     borderRadius: 4,
-    backgroundColor: "lightpink",
+    backgroundColor: "#9E7BB5",
   },
 });
