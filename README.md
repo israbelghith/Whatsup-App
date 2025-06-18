@@ -54,4 +54,4 @@ After launching the application with expo start, you can:
 Israa Belghith - belghithisraa@gmail.com
 
 App Screeshots:
-![Login](https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz)
+<img src="https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz" alt="Login" style="width:300px; max-width:100%;">
