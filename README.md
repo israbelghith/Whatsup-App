@@ -53,13 +53,6 @@ After launching the application with expo start, you can:
 ## Contact
 Israa Belghith - belghithisraa@gmail.com
 
-
-## App Screenshots
-
-Explore the key features of the application through the following screenshots:
-
-# My Project
-
 ## App Screenshots
 
 Explore the key features of the application through the following screenshots:
