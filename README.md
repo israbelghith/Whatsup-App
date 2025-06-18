@@ -59,10 +59,10 @@ Israa Belghith - belghithisraa@gmail.com
 Explore the key features of the application through the following screenshots:
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz" alt="Login Screen" style="width:300px; max-width:100%;">
-  <img src="https://drive.google.com/uc?id=1pgJShvlDnU9jvcqEn8eJgw6aXuUE4tzs" alt="Register Screen" style="width:300px; max-width:100%;">
-  <img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen" style="width:300px; max-width:100%;">
-  <img src="https://drive.google.com/uc?id=1pHm2ywFDJ6GtRfNSlj8CbbuZA_KSefh1" alt="Individual Conversation Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz" alt="Login Screen" style="width:200px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1pgJShvlDnU9jvcqEn8eJgw6aXuUE4tzs" alt="Register Screen" style="width:200px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen" style="width:200px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1pHm2ywFDJ6GtRfNSlj8CbbuZA_KSefh1" alt="Individual Conversation Screen" style="width:200px; max-width:100%;">
 </div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
