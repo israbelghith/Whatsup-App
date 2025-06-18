@@ -3,6 +3,7 @@
 ## Overview
 WhatsUp is a mobile messaging application developed with React Native and Expo. This application allows users to exchange real-time messages, create personalized profiles, and participate in individual or group discussions.
 
+
 ## Features
 - User registration and authentication
 - Real-time messaging
