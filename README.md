@@ -53,5 +53,4 @@ After launching the application with expo start, you can:
 ## Contact
 Israa Belghith - belghithisraa@gmail.com
 
-## License
-Distributed under the MIT License. See LICENSE for more information.
+
