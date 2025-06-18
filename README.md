@@ -51,7 +51,7 @@ After launching the application with expo start, you can:
 * Press "i" to open the application in an iOS simulator
 
 ## Contact
-Israa Belghith - your-email@example.com
+Israa Belghith - belghithisraa@gmail.com
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
