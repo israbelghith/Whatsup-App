@@ -54,22 +54,32 @@ After launching the application with expo start, you can:
 Israa Belghith - belghithisraa@gmail.com
 
 
-
 ## App Screenshots
 
 Explore the key features of the application through the following screenshots:
 
-<img src="https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz" alt="Login Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1pgJShvlDnU9jvcqEn8eJgw6aXuUE4tzs" alt="Register Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1pHm2ywFDJ6GtRfNSlj8CbbuZA_KSefh1" alt="Individual Conversation Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1Xqnv_mB_9DA2fMjP-Auium2VijdJbjo1" alt="List Group Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1Xqnv_mB_9DA2fMjP-Auium2VijdJbjo1" alt="Delete Groups Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1bloHcKkl0DsHOUwNliqdYcxzZx9Ac5Nh" alt="Edit Group Name Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1nB5uf0SEhDXRjgMS-dB9Qirhf3bcGf1z" alt="Manage Members Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1YYm7ssa08IRbmC8QPMQo-5PnraYgTHDN" alt="Manage Actions Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1b_x5vzaj5apzD1VcWk4X7qEYANZPVZS0" alt="Edit Message Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1B9-UimbQeMUdjkWC6D51irL7LRJn59Ec" alt="Delete Message Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=16ObT3fI-nfZFFOhfoKxgRbTzxDkl1tI6" alt="Choose Emojis Screen" style="width:300px; max-width:100%;">
-<img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen (Alternate)" style="width:300px; max-width:100%;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://drive.google.com/uc?id=1sPGrCYKJGnfEMIScHonD5jNL822m_ZLz" alt="Login Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1pgJShvlDnU9jvcqEn8eJgw6aXuUE4tzs" alt="Register Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1pHm2ywFDJ6GtRfNSlj8CbbuZA_KSefh1" alt="Individual Conversation Screen" style="width:300px; max-width:100%;">
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://drive.google.com/uc?id=1Xqnv_mB_9DA2fMjP-Auium2VijdJbjo1" alt="List Group Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1Xqnv_mB_9DA2fMjP-Auium2VijdJbjo1" alt="Delete Groups Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1bloHcKkl0DsHOUwNliqdYcxzZx9Ac5Nh" alt="Edit Group Name Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1nB5uf0SEhDXRjgMS-dB9Qirhf3bcGf1z" alt="Manage Members Screen" style="width:300px; max-width:100%;">
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://drive.google.com/uc?id=1YYm7ssa08IRbmC8QPMQo-5PnraYgTHDN" alt="Manage Actions Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1b_x5vzaj5apzD1VcWk4X7qEYANZPVZS0" alt="Edit Message Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=1B9-UimbQeMUdjkWC6D51irL7LRJn59Ec" alt="Delete Message Screen" style="width:300px; max-width:100%;">
+  <img src="https://drive.google.com/uc?id=16ObT3fI-nfZFFOhfoKxgRbTzxDkl1tI6" alt="Choose Emojis Screen" style="width:300px; max-width:100%;">
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://drive.google.com/uc?id=1YmR9ytHyqX9ZLFOIUIRIAF_HCtmFA_zK" alt="Settings Screen (Alternate)" style="width:300px; max-width:100%;">
+</div>
 
