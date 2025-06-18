@@ -14,15 +14,14 @@ WhatsUp is a mobile messaging application developed with React Native and Expo. 
 
 ## Technologies Used
 - React Native
-- Expo SDK 52 (not the latest version 53)
+- Expo SDK 52
 - Firebase (authentication and database)
 - Supabase (for image storage)
 - React Native Navigation
-- StyleSheet for interface design
 
 ## Prerequisites
 - Node.js (v14 or higher)
-- npm or yarn
+- npm
 - Expo CLI (`npm install -g expo-cli`)
 - A mobile emulator or physical device for testing
 
